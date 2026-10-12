@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="movBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B1B3D"/>
+      <stop offset="100%" stop-color="#0E1324"/>
+    </linearGradient>
+  </defs>
+  <rect width="300" height="450" fill="url(#movBg2)" rx="14"/>
+  <rect x="15" y="15" width="270" height="420" fill="none" stroke="#D4AF37" stroke-width="1.5" stroke-dasharray="6,4" rx="10"/>
+  <!-- Film tape / Ticket star -->
+  <circle cx="150" cy="160" r="60" fill="#6B2D38" opacity="0.6"/>
+  <polygon points="150,120 159,145 186,145 164,162 172,188 150,172 128,188 136,162 114,145 141,145" fill="#D4AF37"/>
+  <text x="150" y="270" font-family="'Playfair Display', Georgia, serif" font-size="18" fill="#FFFDF9" text-anchor="middle" font-weight="bold">CINE CASAL</text>
+  <text x="150" y="300" font-family="sans-serif" font-size="13" fill="#E8B4B8" text-anchor="middle">SessÃ£o Exclusiva a Dois</text>
+  <text x="150" y="340" font-family="sans-serif" font-size="11" fill="#C5A059" text-anchor="middle">â˜…â˜…â˜…â˜…â˜… Obra Prima do CoraÃ§Ã£o</text>
+  <rect x="70" y="370" width="160" height="28" rx="14" fill="#6B2D38"/>
+  <text x="150" y="388" font-family="sans-serif" font-size="11" fill="#FFFDF9" text-anchor="middle" font-weight="bold">ENTRADA VIP LIBERADA</text>
+</svg>

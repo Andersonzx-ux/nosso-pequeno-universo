@@ -1,0 +1,75 @@
+/* ==========================================================================
+   NOSSO PEQUENO UNIVERSO — ESTILOS DE IMPRESSÃO (JORNAL & CONTRATO)
+   ========================================================================== */
+
+@media print {
+  /* Oculta elementos de navegação e interface digital */
+  .portal-screen,
+  .universe-header,
+  .category-nav-wrapper,
+  .hub-intro-card,
+  .experience-grid,
+  .mascot-widget-wrapper,
+  .btn-sound-toggle,
+  .achievement-toast,
+  .btn-nav-back,
+  .modal-backdrop,
+  .ambient-star-canvas,
+  .btn-print-action,
+  .btn-clear-sig,
+  .roulette-container,
+  .jukebox-deck,
+  .experience-banner button {
+    display: none !important;
+  }
+
+  body {
+    background: #FFF !important;
+    color: #000 !important;
+    padding: 0 !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Jornal de casal para impressão perfeita em folha A4 */
+  .newspaper-page {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    background: #FFF !important;
+    page-break-after: avoid;
+  }
+
+  .newspaper-title {
+    font-size: 28pt !important;
+    color: #000 !important;
+  }
+
+  .newspaper-columns {
+    column-count: 2 !important;
+    column-gap: 1.5cm !important;
+  }
+
+  /* Contrato de casal para impressão */
+  .contract-scroll {
+    border: 2px solid #333 !important;
+    box-shadow: none !important;
+    padding: 2cm !important;
+    background: #FFF !important;
+    page-break-after: avoid;
+  }
+
+  .contract-scroll h2 {
+    font-size: 20pt !important;
+    color: #000 !important;
+  }
+
+  .signature-pad-wrapper {
+    border: 1px solid #000 !important;
+  }
+}

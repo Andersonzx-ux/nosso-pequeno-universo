@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#FAF6F0" rx="14"/>
+  <rect x="40" y="40" width="320" height="220" fill="#FFFDF9" stroke="#E8B4B8" stroke-width="1.5" rx="8"/>
+  <!-- Envelope flap lines -->
+  <polygon points="40,40 200,160 360,40" fill="#FDF6F7" stroke="#D49A9E" stroke-width="1.5"/>
+  <!-- Wax seal -->
+  <circle cx="200" cy="160" r="26" fill="#843B47"/>
+  <circle cx="200" cy="160" r="22" fill="#6B2D38"/>
+  <path d="M200,150 C197,146 191,146 188,150 C185,154 185,158 188,162 L200,172 L212,162 C215,158 215,154 212,150 C209,146 203,146 200,150 Z" fill="#D4AF37"/>
+  <text x="200" y="235" font-family="'Playfair Display', Georgia, serif" font-size="15" fill="#6B2D38" text-anchor="middle">Carta Feita com Carinho</text>
+</svg>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nosso Pequeno Universo — Um Presente de Amor</title>
+  <meta name="description"
+    content="Um universo digital particular, romântico e interativo feito com todo o amor do mundo.">
+  <meta name="theme-color" content="#FAF6F0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Nosso Universo">
+  <link rel="apple-touch-icon" href="assets/images/placeholder-star-1.svg">
+
+  <!-- Manifest PWA para instalação no celular -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Estilos da Aplicação -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/experiences.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+
+  <!-- Fundo Estelar Dinâmico Sutil -->
+  <canvas id="ambientStarCanvas" class="ambient-star-canvas"></canvas>
+
+  <div class="universe-app">
+
+    <!-- ====================================================================
+         1. PORTAL DE ENTRADA (PRIMEIRA IMPRESSÃO EMOCIONAL)
+         ==================================================================== -->
+    <div id="portalScreen" class="portal-screen">
+      <div class="portal-card">
+        <div class="portal-emblem">
+          <span style="font-size: 2rem;">✨</span>
+        </div>
+        <h1 class="portal-title">Nosso Pequeno Universo</h1>
+        <div class="portal-couple-names">Anderson &amp; Larissa</div>
+
+        <p class="portal-quote">
+          Eu poderia te dar muitas coisas, mas quis criar um lugar onde um pouquinho da nossa história pudesse morar.
+        </p>
+
+        <button id="btnPortalEnter" class="btn-portal-enter">
+          <span>Começar a Explorar</span>
+          <span style="font-size: 1.2rem;">✨</span>
+        </button>
+
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1.25rem;">
+          Toque para entrar no nosso mundo
+        </p>
+      </div>
+    </div>
+
+    <!-- ====================================================================
+         2. CABEÇALHO DA APLICAÇÃO
+         ==================================================================== -->
+    <header class="universe-header" id="universeHeader">
+      <div class="header-inner">
+        <div class="header-left">
+          <button id="btnNavBack" class="btn-nav-back" style="visibility: hidden;"
+            aria-label="Voltar para a página principal">
+            ←
+          </button>
+          <div class="header-title-box">
+            <span id="headerSiteTitle" class="header-site-title">Nosso Pequeno Universo</span>
+            <span id="headerCoupleSub" class="header-couple-sub">Anderson &amp; Meu Amor</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div id="progressCounterPill" class="progress-pill">
+            0 / 18 descobertas ✨
+          </div>
+          <button id="btnSoundToggle" class="btn-sound-toggle" title="Ativar/Desativar Sons Suaves"
+            aria-label="Controle de Som">
+            🔔
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         3. CONTEÚDO PRINCIPAL (HUB & EXPERIÊNCIAS)
+         ==================================================================== -->
+    <main style="flex: 1;">
+      <!-- A. HUB PRINCIPAL COM CATEGORIAS E AS 18 EXPERIÊNCIAS -->
+      <section id="hubContainer" class="container" style="padding-top: 1.5rem;">
+
+        <div class="hub-intro-card">
+          <span class="handwritten" id="relationshipDaysCounter"
+            style="display: block; margin-bottom: 0.5rem; font-size: 1.5rem; color: var(--wine-deep);">
+            Construindo o nosso amor dia após dia
+          </span>
+          <h2>Bem-vinda ao nosso universo particular</h2>
+          <p>
+            Reuni aqui 18 partes da nossa história, das memórias mais bonitas aos planos que ainda vamos viver.
+            Explore sem pressa, no seu próprio ritmo.
+          </p>
+        </div>
+
+        <!-- Seletor de Categorias -->
+        <div class="category-nav-wrapper">
+          <div class="category-nav" id="categoryNav">
+            <!-- Pílulas injetadas dinamicamente via app.js -->
+          </div>
+        </div>
+
+        <!-- Grade das 18 Experiências -->
+        <div class="experience-grid" id="experienceGrid">
+          <!-- Cartões injetados dinamicamente via app.js -->
+        </div>
+
+      </section>
+
+      <!-- B. VISUALIZADOR DA EXPERIÊNCIA ATIVA -->
+      <section id="activeExperienceView" class="active-experience-view">
+        <!-- Conteúdo da experiência selecionada injetado pelo roteador -->
+      </section>
+    </main>
+
+    <!-- ====================================================================
+         4. MASCOTE FLUTUANTE COMPANHEIRO
+         ==================================================================== -->
+    <div class="mascot-widget-wrapper">
+      <div id="mascotSpeechBubble" class="mascot-speech-bubble">
+        Oii meu amor! Dá um toque em mim! 💖
+      </div>
+      <button id="mascotFabBtn" class="btn-mascot-fab" aria-label="Interagir com o mascote">
+        <span style="font-size: 1.7rem;">⭐</span>
+        <span class="mascot-heart-badge">❤</span>
+      </button>
+    </div>
+
+    <!-- ====================================================================
+         5. TOAST NOTIFICATION DE CONQUISTAS
+         ==================================================================== -->
+    <div id="achievementToast" class="achievement-toast">
+      <span style="font-size: 1.4rem;">🏆</span>
+      <span id="toastTitle" style="font-size: 0.9rem; font-weight: 600;">Nova Conquista Desbloqueada!</span>
+    </div>
+
+    <!-- ====================================================================
+         6. RODAPÉ DO UNIVERSO
+         ==================================================================== -->
+    <footer class="universe-footer">
+      <div class="container">
+        <p class="footer-quote">
+          “O amor é um lugar que a gente constrói todos os dias.”
+        </p>
+        <p class="footer-meta">
+          Criado com todo o meu coração para você
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts da Aplicação (Carregamento modular e sem dependências externas) -->
+  <script src="js/config.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/mascot.js"></script>
+  <script src="js/experiences/group1.js"></script>
+  <script src="js/experiences/group2.js"></script>
+  <script src="js/experiences/group3.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

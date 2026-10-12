@@ -1,0 +1,161 @@
+/* ==========================================================================
+   NOSSO PEQUENO UNIVERSO — BASE & DESIGN SYSTEM
+   ========================================================================== */
+
+/* Importação de fontes refinadas e legíveis */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Paleta Afetiva Central */
+  --bg-primary: #FAF6F0;       /* Creme aconchegante */
+  --bg-surface: #FFFDF9;       /* Marfim puro */
+  --bg-surface-soft: #F5EFEB;  /* Marfim levemente sombreado */
+  --bg-card: #FFFFFF;          /* Cartões limpos */
+
+  /* Tons Românticos & Destaques */
+  --rose-soft: #F4D6D8;        /* Rosa suave */
+  --rose-vintage: #D49A9E;     /* Rosa antigo */
+  --rose-medium: #B33951;      /* Rosa carmim */
+  --wine-deep: #6B2D38;        /* Vinho / Bordô nobre */
+  --wine-dark: #4A1521;        /* Vinho profundo */
+
+  /* Detalhes Celestiais & Ouro */
+  --gold-starlight: #D4AF37;   /* Ouro discreto */
+  --gold-soft: #F3E5AB;        /* Ouro champanhe */
+  --gold-border: #C5A059;      /* Dourado para contornos */
+
+  /* Atmosfera Noturna / Constelações */
+  --night-deep: #0E1324;       /* Azul noite cósmico */
+  --night-card: #181D33;       /* Azul marinho profundo */
+  --night-violet: #2B1B3D;     /* Violeta celestial */
+
+  /* Tipografia & Contrastes Neutros */
+  --text-primary: #2D2628;     /* Grafite quente com contraste perfeito */
+  --text-secondary: #5A4E51;   /* Subtítulos e descrições */
+  --text-muted: #8A7D81;       /* Textos secundários discretos */
+  --border-light: rgba(107, 45, 56, 0.12);
+  --border-gold: rgba(212, 175, 55, 0.4);
+
+  /* Sombras Delicadas e Artesanais */
+  --shadow-subtle: 0 4px 20px rgba(74, 21, 33, 0.05);
+  --shadow-card: 0 8px 30px rgba(74, 21, 33, 0.08);
+  --shadow-hover: 0 14px 40px rgba(74, 21, 33, 0.14);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  /* Tipografia */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+
+  /* Raios e Espaçamentos */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+
+  /* Áreas de segurança para iPhone / Safari */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+/* Reset Moderno */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  min-height: 100dvh;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100%;
+  min-height: 100dvh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fundo Estelar Dinâmico Sutil (sem sobrecarga de bateria) */
+.ambient-star-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Tipografia Base */
+h1, h2, h3, h4, .serif-text {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--wine-deep);
+  line-height: 1.3;
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.handwritten {
+  font-family: var(--font-handwriting);
+  color: var(--wine-deep);
+  font-size: 1.35rem;
+}
+
+/* Links & Botões Universais */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Layouts & Containers */
+.universe-app {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Suporte para Preferência de Menos Movimento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

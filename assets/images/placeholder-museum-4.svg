@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#F5EFEB" rx="14"/>
+  <!-- Ornate Golden Frame -->
+  <rect x="50" y="30" width="300" height="200" fill="#FFFDF9" stroke="#C5A059" stroke-width="10" rx="4"/>
+  <rect x="60" y="40" width="280" height="180" fill="#FBF5F2" stroke="#843B47" stroke-width="2"/>
+  <!-- Museum art content -->
+  <circle cx="200" cy="120" r="45" fill="#E8B4B8" opacity="0.8"/>
+  <polygon points="200,90 206,108 225,108 210,120 216,138 200,126 184,138 190,120 175,108 194,108" fill="#6B2D38"/>
+  <!-- Brass Plaque below -->
+  <rect x="120" y="245" width="160" height="30" rx="4" fill="#D4AF37" stroke="#A67C1E" stroke-width="1.5"/>
+  <text x="200" y="265" font-family="'Playfair Display', Georgia, serif" font-size="12" fill="#2B1B3D" text-anchor="middle" font-weight="bold">OBRA DE ARTE #4</text>
+</svg>

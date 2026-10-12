@@ -1,0 +1,862 @@
+/* ==========================================================================
+   NOSSO PEQUENO UNIVERSO — ESTILOS DAS 18 EXPERIÊNCIAS AFETIVAS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 01: MAPA DE MEMÓRIAS
+   -------------------------------------------------------------------------- */
+.map-canvas-container {
+  background: #FDF9F3;
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.map-illustrated-board {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+  background: radial-gradient(circle at 50% 50%, #FAF0EE 0%, #F5E5E2 100%);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--rose-vintage);
+}
+
+.map-route-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 2px solid var(--wine-deep);
+  box-shadow: 0 4px 12px rgba(107, 45, 56, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  z-index: 10;
+}
+
+.map-pin:hover, .map-pin:focus, .map-pin.active {
+  transform: translate(-50%, -50%) scale(1.15);
+  background: var(--wine-deep);
+  color: #FFFDF9;
+}
+
+.map-pin.highlight::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--gold-starlight);
+  animation: pulseGentle 2s infinite;
+}
+
+.map-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.map-timeline-item {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.map-timeline-item:hover {
+  border-color: var(--wine-deep);
+  transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 02: LIVRO DE RECEITAS AFETIVAS
+   -------------------------------------------------------------------------- */
+.recipe-book-jacket {
+  background: #FDF9F5;
+  border: 2px solid #E2D1C3;
+  border-left: 12px solid #843B47;
+  border-radius: 4px var(--radius-md) var(--radius-md) 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08), inset 0 0 40px rgba(0,0,0,0.02);
+  padding: 2rem 1.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.recipe-book-header {
+  border-bottom: 2px dashed #E2D1C3;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.recipe-tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.recipe-tab-btn {
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface-soft);
+  border: 1px solid var(--border-light);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.recipe-tab-btn.active {
+  background: #843B47;
+  color: #FFFDF9;
+}
+
+.recipe-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .recipe-content-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.recipe-ingredients-box {
+  background: #FFFDF9;
+  border: 1px solid #EFE4DC;
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+}
+
+.recipe-ingredients-box h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.ingredient-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+}
+
+.recipe-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-card {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--rose-vintage);
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 03: CINEMA PARTICULAR
+   -------------------------------------------------------------------------- */
+.cinema-marquee {
+  background: linear-gradient(135deg, var(--night-deep) 0%, #1A0D26 100%);
+  color: #FFFDF9;
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 40px rgba(14, 19, 36, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.cinema-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-poster-card {
+  background: #FFF;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-poster-card:hover {
+  transform: translateY(-6px);
+}
+
+.poster-media {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: #1B2038;
+}
+
+.poster-info {
+  padding: 1.25rem;
+}
+
+.poster-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.movie-quote {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--rose-medium);
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 04: CARTAS DE "ABRA QUANDO..."
+   -------------------------------------------------------------------------- */
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.envelope-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.envelope-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.wax-seal {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-full);
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFDF9;
+  box-shadow: 0 4px 15px rgba(107, 45, 56, 0.3);
+  position: relative;
+}
+
+.wax-seal::after {
+  content: "❤";
+  font-size: 1.2rem;
+}
+
+.envelope-card.opened-stamp::before {
+  content: "LIDA COM AMOR";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--rose-vintage);
+  border: 1px dashed var(--rose-vintage);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transform: rotate(8deg);
+}
+
+.letter-unfolded-view {
+  background: #FFFDF9;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-inner);
+  font-family: var(--font-serif);
+  line-height: 1.8;
+  color: var(--text-primary);
+  white-space: pre-line;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 05: CAÇA AO TESOURO DIGITAL
+   -------------------------------------------------------------------------- */
+.treasure-hunt-card {
+  background: #FFFDF9;
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-card);
+}
+
+.hunt-progress-bar {
+  height: 8px;
+  background: var(--bg-surface-soft);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.hunt-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-border), var(--wine-deep));
+  transition: width 0.4s ease-out;
+}
+
+.clue-riddle-box {
+  background: #FAF3EC;
+  border-left: 4px solid var(--gold-border);
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  font-family: var(--font-serif);
+}
+
+.hunt-input-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.hunt-input {
+  flex: 1;
+  padding: 0.85rem 1.2rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  outline: none;
+  min-height: 48px;
+}
+
+.hunt-input:focus {
+  border-color: var(--wine-deep);
+  box-shadow: 0 0 0 3px rgba(107, 45, 56, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 06: JUKEBOX DE VOZ
+   -------------------------------------------------------------------------- */
+.jukebox-deck {
+  background: linear-gradient(135deg, #3A2332 0%, #1D1526 100%);
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  color: #FFFDF9;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+}
+
+.jukebox-visualizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.vinyl-disc {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-full);
+  background: repeating-radial-gradient(#111, #111 4px, #222 5px, #111 6px);
+  border: 3px solid #D4AF37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.vinyl-disc.spinning {
+  animation: spinVinyl 3s linear infinite;
+}
+
+.vinyl-center {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--wine-deep);
+  border: 2px solid #FFF;
+}
+
+.jukebox-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.btn-play-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--gold-starlight), #B8860B);
+  color: #1A0D26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.track-progress-container {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.track-progress-fill {
+  height: 100%;
+  background: var(--gold-starlight);
+  border-radius: 3px;
+  width: 0%;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 07: MAPA ASTRAL INVENTADO
+   -------------------------------------------------------------------------- */
+.astral-card-wrapper {
+  background: linear-gradient(135deg, #0E1324 0%, #201738 100%);
+  color: #FFFDF9;
+  border: 1px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.compatibility-bar-group {
+  margin: 1rem 0;
+}
+
+.comp-meter {
+  height: 10px;
+  background: rgba(255,255,255,0.15);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin: 0.4rem 0 0.8rem;
+}
+
+.comp-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--rose-vintage), var(--gold-starlight));
+  border-radius: var(--radius-full);
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 08: CÁPSULA DO TEMPO
+   -------------------------------------------------------------------------- */
+.capsule-timer-display {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.timer-slot {
+  background: var(--wine-deep);
+  color: #FFFDF9;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  min-width: 68px;
+  text-align: center;
+}
+
+.timer-slot .num {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+}
+
+.timer-slot .label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 09: CONQUISTAS DESBLOQUEADAS
+   -------------------------------------------------------------------------- */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.achievement-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: var(--shadow-card);
+}
+
+.achievement-card.unlocked {
+  border-color: var(--gold-border);
+  background: linear-gradient(135deg, #FFFDF9 0%, #FFF9EE 100%);
+}
+
+.achievement-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--gold-starlight);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.achievement-card.locked .achievement-icon {
+  background: #E0E0E0;
+  color: #9E9E9E;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 10: MUSEU DO NOSSO AMOR
+   -------------------------------------------------------------------------- */
+.museum-wing-selector {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.museum-exhibit-card {
+  background: var(--bg-surface);
+  border: 8px solid #C5A059;
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  margin-bottom: 2rem;
+}
+
+.museum-plaque {
+  background: #EFE4D2;
+  border: 1px solid #C5A059;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-top: 1rem;
+  font-family: var(--font-serif);
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 11: ROLETA DOS ENCONTROS
+   -------------------------------------------------------------------------- */
+.roulette-container {
+  max-width: 420px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.roulette-wheel-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto 1.5rem;
+}
+
+.roulette-pointer {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 24px solid var(--wine-deep);
+  z-index: 20;
+}
+
+.roulette-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 30px rgba(107, 45, 56, 0.25);
+  border: 4px solid var(--gold-border);
+  transition: transform 3.5s cubic-bezier(0.15, 0.9, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 12: ARQUIVO DE COISAS QUE AMO
+   -------------------------------------------------------------------------- */
+.archive-search-box {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.archive-search-input {
+  width: 100%;
+  padding: 0.85rem 1.25rem 0.85rem 2.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  background: var(--bg-surface);
+}
+
+.archive-card {
+  background: #FFFDF9;
+  border: 1px solid #EAD8C0;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.archive-card::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 20px;
+  height: 8px;
+  background: #C5A059;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 13: CONSTELAÇÃO DOS MOMENTOS
+   -------------------------------------------------------------------------- */
+.constellation-sky-box {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 320px;
+  background: radial-gradient(circle at center, #1B2038 0%, #0E1324 100%);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-gold);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  margin-bottom: 2rem;
+}
+
+.constellation-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 14: JORNAL OFICIAL DO CASAL
+   -------------------------------------------------------------------------- */
+.newspaper-page {
+  background: #FAF6EE;
+  border: 1px solid #D9CFB8;
+  padding: 2.5rem 1.75rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  color: #24211D;
+}
+
+.newspaper-masthead {
+  text-align: center;
+  border-bottom: 3px double #333;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.newspaper-title {
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.newspaper-columns {
+  column-count: 1;
+  column-gap: 2rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .newspaper-columns {
+    column-count: 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 15: MISSÕES PARA O NOSSO FUTURO
+   -------------------------------------------------------------------------- */
+.mission-item-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.mission-checkbox {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--rose-vintage);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.mission-checkbox.checked {
+  background: #2E7D32;
+  border-color: #2E7D32;
+  color: #FFF;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 16: O CANTO QUE SÓ EXISTE PARA ELA
+   -------------------------------------------------------------------------- */
+.sanctuary-chamber {
+  background: radial-gradient(circle at center, #FFFDF9 0%, #FBF1F2 100%);
+  border: 2px solid var(--rose-vintage);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.75rem;
+  box-shadow: 0 10px 40px rgba(179, 57, 81, 0.1);
+}
+
+.secret-word-trigger {
+  color: var(--rose-medium);
+  border-bottom: 1px dashed var(--rose-medium);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 17: CONTRATO DE AVENTURAS A DOIS
+   -------------------------------------------------------------------------- */
+.contract-scroll {
+  background: #FFFDF9;
+  border: 2px solid #D4AF37;
+  border-radius: var(--radius-md);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.signature-pad-wrapper {
+  background: #FFF;
+  border: 1px dashed #A89F91;
+  border-radius: var(--radius-sm);
+  margin: 1.5rem 0;
+  touch-action: none;
+}
+
+.signature-canvas {
+  width: 100%;
+  height: 140px;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   EXPERIÊNCIA 18: MASCOTE VIRTUAL DO CASAL
+   -------------------------------------------------------------------------- */
+.mascot-stage {
+  background: linear-gradient(135deg, #FFF9F2 0%, #FFEBE6 100%);
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+
+.mascot-avatar-box {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.mascot-actions-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.btn-mascot-action {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  color: var(--wine-deep);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--shadow-subtle);
+  min-height: 44px;
+}
+
+.btn-mascot-action:active {
+  transform: scale(0.95);
+  background: var(--rose-soft);
+}
+
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

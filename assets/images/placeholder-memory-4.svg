@@ -1,0 +1,25 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1B2038"/>
+      <stop offset="60%" stop-color="#2B1B3D"/>
+      <stop offset="100%" stop-color="#6B2D38"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#nightSky)" rx="16"/>
+  <!-- Stars -->
+  <circle cx="60" cy="50" r="1.5" fill="#FFF"/>
+  <circle cx="120" cy="30" r="2" fill="#FFEAA7"/>
+  <circle cx="180" cy="65" r="1.5" fill="#FFF"/>
+  <circle cx="270" cy="40" r="2.5" fill="#FFF"/>
+  <circle cx="340" cy="70" r="1.5" fill="#FFEAA7"/>
+  <circle cx="220" cy="20" r="2" fill="#FFF"/>
+  <!-- Crescent Moon -->
+  <path d="M310,35 A22,22 0 1 0 332,57 A18,18 0 1 1 310,35 Z" fill="#F6D887"/>
+  <!-- Mountains -->
+  <polygon points="40,210 140,140 230,220" fill="#20112A" opacity="0.9"/>
+  <polygon points="180,220 290,130 380,220" fill="#14091A" opacity="0.9"/>
+  <!-- Road winding -->
+  <path d="M200,210 Q210,240 230,300 L170,300 Q190,240 200,210 Z" fill="#C5A059" opacity="0.8"/>
+  <text x="200" y="270" font-family="'Playfair Display', Georgia, serif" font-size="15" fill="#FDF8F5" text-anchor="middle">Nossa Primeira Viagem</text>
+</svg>

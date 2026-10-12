@@ -1,0 +1,26 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rainBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E9ECEF"/>
+      <stop offset="100%" stop-color="#CED4DA"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#rainBg)" rx="16"/>
+  <!-- Raindrops -->
+  <g stroke="#843B47" stroke-width="1.5" stroke-linecap="round" opacity="0.4">
+    <line x1="80" y1="40" x2="60" y2="90"/>
+    <line x1="140" y1="20" x2="120" y2="70"/>
+    <line x1="280" y1="30" x2="260" y2="80"/>
+    <line x1="330" y1="60" x2="310" y2="110"/>
+    <line x1="100" y1="180" x2="80" y2="230"/>
+    <line x1="320" y1="170" x2="300" y2="220"/>
+  </g>
+  <!-- Umbrella -->
+  <path d="M120,130 Q200,60 280,130 Q250,120 220,130 Q200,120 180,130 Q150,120 120,130 Z" fill="#843B47"/>
+  <path d="M200,60 L200,175 C200,185 190,188 185,183" fill="none" stroke="#52202A" stroke-width="5" stroke-linecap="round"/>
+  <!-- Mini hearts under umbrella -->
+  <path d="M190,135 C186,130 180,133 182,138 L190,146 L198,138 C200,133 194,130 190,135 Z" fill="#D49A9E"/>
+  <path d="M210,140 C206,135 200,138 202,143 L210,151 L218,143 C220,138 214,135 210,140 Z" fill="#B33951"/>
+  <text x="200" y="240" font-family="'Playfair Display', Georgia, serif" font-size="16" fill="#4A1521" text-anchor="middle">A Chuva Que Nos Uniu</text>
+  <text x="200" y="265" font-family="sans-serif" font-size="12" fill="#6B4D57" text-anchor="middle">Rindo debaixo do temporal</text>
+</svg>
